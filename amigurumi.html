@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amigurumi Collection — Crafted Stitches</title>
+
+  <!-- Reuse your main CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div>
+          <h1>CRAFTED STITCHES</h1>
+          <p>Handmade with love</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="portfolio.html#home">Home</a>
+        <a href="portfolio.html#products">Products</a>
+        <a href="portfolio.html#gallery">Gallery</a>
+        <a href="portfolio.html#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Amigurumi list -->
+    <section class="card">
+      <h3>Amigurumi Collection</h3>
+      <p>Select your favourite character and add it to cart.</p>
+
+      <div class="product-grid" aria-live="polite">
+        <div class="product" data-name="Amigurumi Panda" data-price="180">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe8WqoVz0gn1IBH2blLs9lgOUDFbQb07uqBA&s" alt="panda">
+          <div class="meta">
+            <h4>Amigurumi Panda</h4>
+            <p>Cute black &amp; white panda.</p>
+          </div>
+        </div>
+
+        <div class="product" data-name="Amigurumi Tiger" data-price="180">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYtQ81Vv62QSWjO5BzJ_F3j2xy_Ji4dDAAaQ&s" alt="tiger">
+          <div class="meta">
+            <h4>Amigurumi Tiger</h4>
+            <p>Striped jungle friend.</p>
+          </div>
+        </div>
+
+        <div class="product" data-name="Amigurumi Octopus" data-price="180">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOgwKL_O0CVZ5eT-lPtdS-voGongVy7ngUcg&s" alt="octopus">
+          <div class="meta">
+            <h4>Amigurumi Octopus</h4>
+            <p>Adorable tentacles, perfect for gifting.</p>
+          </div>
+        </div>
+
+        <div class="product" data-name="Amigurumi Bunny" data-price="180">
+          <img src="https://i.pinimg.com/236x/f1/2d/ba/f12dbaee56d8b75a4bc4498ad06b89f8.jpg" alt="bunny">
+          <div class="meta">
+            <h4>Amigurumi Bunny</h4>
+            <p>Soft pastel bunny with long ears.</p>
+          </div>
+        </div>
+
+        <div class="product" data-name="Amigurumi Bear" data-price="180">
+          <img src="https://blog.alwaysfreeamigurumi.com/wp-content/uploads/2023/07/Amigurumi-Bear-Free-Pattern_blogAlways_180422-1.jpg" alt="bear">
+          <div class="meta">
+            <h4>Amigurumi Bear</h4>
+            <p>Classic teddy style amigurumi.</p>
+          </div>
+        </div>
+
+        <div class="product" data-name="Amigurumi Cat" data-price="180">
+          <img src="https://i.pinimg.com/736x/95/be/18/95be184e3712c5811fdd01e0e3fb3be8.jpg" alt="cat">
+          <div class="meta">
+            <h4>Amigurumi Cat</h4>
+            <p>Whiskered friend with tiny paws.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart (same structure on all 4 pages) -->
+    <section class="cart">
+      <h2>Your Cart 🛒</h2>
+      <div id="cartItems"></div>
+      <p id="totalPrice">Total: ₹0</p>
+      <button class="btn btn-primary" id="cartBuyNow">Buy Now</button>
+    </section>
+
+    <!-- Shared modal (same on all 4 pages) -->
+    <div id="productModal" class="modal-overlay" style="display:none;">
+      <div class="modal">
+        <h3 id="modalTitle"></h3>
+        <p id="modalPrice"></p>
+
+        <label for="modalQty">Quantity:</label>
+        <input type="number" id="modalQty" value="1" min="1">
+
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="modalAddCart">🛒 Add to Cart</button>
+          <button class="btn" id="modalBuyNow">Buy Now</button>
+          <button class="btn btn-ghost" id="modalClose">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © CozyLoops Crochet — Handmade goods · 2025
+    </footer>
+  </div>
+
+  <!-- Shared JS for ALL product pages -->
+  <script src="products.js"></script>
+</body>
+</html>

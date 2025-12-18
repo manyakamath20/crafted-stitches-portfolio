@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coaster Collections— Crafted Stitches</title>
+
+  <!-- Reuse your main CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div>
+          <h1>CRAFTED STITCHES</h1>
+          <p>Handmade with love</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="portfolio.html#home">Home</a>
+        <a href="portfolio.html#products">Products</a>
+        <a href="portfolio.html#gallery">Gallery</a>
+        <a href="portfolio.html#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Coaster list -->
+    <section class="card">
+      <h3>Coasters Collection</h3>
+      <p>Select your favourite coaster(pack of two) and add it to cart.</p>
+
+      <div class="product-grid" aria-live="polite">
+        <div class="product" data-name="Lime Coasters" data-price="180">
+          <img src="https://littleconkers.co.uk/wp-content/uploads/2024/08/Citrus-Coaster-Crochet-Pattern-Featured-Image.jpg" alt="lime">
+          <div class="meta">
+            <h4>Lime Coasters</h4>
+            <p>Zesty lime‑slice coasters with fresh green segments.</p>
+          </div>
+        </div>
+
+        <div class="product" data-name="Watermelon coaster" data-price="180">
+          <img src="https://storage.googleapis.com/ribblr-disk/pics/38265/cover-5qcc2w1rn6.jpg_" alt="watermelon">
+          <div class="meta">
+            <h4>Watermelon Coaster</h4>
+            <p> Fun, summery slices with pink centers and green rinds.</p>
+          </div>
+        </div>
+
+        <div class="product" data-name="Leaf Coasters" data-price="180">
+          <img src="https://images4-a.ravelrycache.com/uploads/winterblue/405359204/IMG_0143_medium2.JPG" alt="leaf">
+          <div class="meta">
+            <h4>Leaf coasters</h4>
+            <p> Nature‑inspired coasters shaped like soft, textured leaves.</p>
+          </div>
+        </div>
+
+        <div class="product" data-name="Rose coaster" data-price="180">
+          <img src="https://m.media-amazon.com/images/I/71HEE21adiL.jpg" alt="rose">
+          <div class="meta">
+            <h4>Rose coaster</h4>
+            <p> Delicate crochet coasters with a blooming rose pattern.</p>
+          </div>
+        </div>
+
+        <div class="product" data-name="Flower coaster" data-price="180">
+          <img src="https://www.stitchbyfay.com/wp-content/uploads/2024/04/daisy-flower-crochet-coaster-pattern-feat2-720x720.jpg" alt="flower">
+          <div class="meta">
+            <h4>Flower coaster</h4>
+            <p>Bright floral coasters that add a cheerful touch to any table.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart (same structure on all 4 pages) -->
+    <section class="cart">
+      <h2>Your Cart 🛒</h2>
+      <div id="cartItems"></div>
+      <p id="totalPrice">Total: ₹0</p>
+      <button class="btn btn-primary" id="cartBuyNow">Buy Now</button>
+    </section>
+
+    <!-- Shared modal (same on all 4 pages) -->
+    <div id="productModal" class="modal-overlay" style="display:none;">
+      <div class="modal">
+        <h3 id="modalTitle"></h3>
+        <p id="modalPrice"></p>
+
+        <label for="modalQty">Quantity:</label>
+        <input type="number" id="modalQty" value="1" min="1">
+
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="modalAddCart">🛒 Add to Cart</button>
+          <button class="btn" id="modalBuyNow">Buy Now</button>
+          <button class="btn btn-ghost" id="modalClose">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © CozyLoops Crochet — Handmade goods · 2025
+    </footer>
+  </div>
+
+  <!-- Shared JS for ALL product pages -->
+  <script src="products.js"></script>
+</body>
+</html>
