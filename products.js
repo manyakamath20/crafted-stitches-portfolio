@@ -1,3 +1,4 @@
+
 // ==================== CART LOGIC ====================
 let cart = []; // default empty cart
 const savedCart = localStorage.getItem("cartData");
@@ -186,3 +187,4 @@ fbSubmit.addEventListener("click", () => {
   document.getElementById("fbName").value = "";
   document.getElementById("fbMessage").value = "";
 });
+

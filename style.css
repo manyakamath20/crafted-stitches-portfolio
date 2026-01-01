@@ -1,3 +1,4 @@
+
 :root{
   --bg:#FFF5EB;
   --accent:#F8DDE6;
@@ -136,9 +137,15 @@ nav a.cta{
 }
 
 .product-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
+  display: flex;
+  flex-wrap: wrap;       /* allows items to move to next line on small screens */
+  gap: 16px;             /* space between items */
+  justify-content: center;
+}
+.product-grid .product {
+  flex: 1 1 200px;       /* grow, shrink, base width 200px */
+  max-width: 250px;      /* optional: prevent very wide boxes */
+  box-sizing: border-box;
 }
 
 .product{display:flex;gap:12px;align-items:center}
@@ -147,9 +154,11 @@ nav a.cta{
 }
 
 .product img{
-  width:96px;height:96px;
-  border-radius:10px;
-  object-fit:cover;
+  width: 100%;          /* image takes full width of its container */
+  max-width: 150px;     /* optional: don't let it grow too big */
+  height: auto;         /* keep aspect ratio */
+  border-radius: 10px;
+  object-fit: cover;    /* crop nicely if needed */
 }
 
 .gallery{
@@ -203,8 +212,8 @@ footer{
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .hero,.grid{grid-template-columns:1fr}
-  .gallery{grid-template-columns:repeat(2,1fr)}
+  .hero, .grid { grid-template-columns:1fr; }
+  .gallery { grid-template-columns:repeat(2,1fr); }
   nav {
     display:flex;
     gap:6px;
@@ -218,6 +227,32 @@ footer{
     margin:20px 0;
   }
 }
+
+/* For very small screens (phones) */
+@media(max-width:400px){
+  .product-grid .product {
+    flex: 1 1 100%;   /* product takes full width */
+    max-width: 100%;
+  }
+
+  header {
+    padding: 10px 12px;
+  }
+
+  .brand h1 {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  body {
+    padding: 20px 12px;
+  }
+}
+
 
 /* Item selection styling */
 .item-select {
