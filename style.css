@@ -217,6 +217,20 @@ footer{
     width:100%;
     margin:20px 0;
   }
+    /* Stack products vertically on small screens */
+  .product-grid {
+    grid-template-columns: 1fr;  /* 1 column instead of 2 */
+    gap: 16px;                   /* optional: space between products */
+  }
+
+  .product {
+    flex-direction: row; /* already row, but can add column if needed */
+  }
+
+  .product img {
+    width: 80px;  /* smaller image for mobile if needed */
+    height: 80px;
+  }
 }
 /* === PRODUCT GRID RESPONSIVE FIX === */
 @media(max-width:600px){
